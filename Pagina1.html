@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PáginaLogin</title>
+</head>
+<Style>
+  .container {
+        width: 100vw;
+        height: 100vh;
+        background: #8c9094;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center
+    }
+    .box {
+        width: 500px;
+        height: 300px;
+        background: #fff;
+    }
+    #login{
+        width: 450px;
+        height: 25px;
+        display: block;
+         margin-left: auto;
+        margin-right: auto;
+       
+    }
+    .Login{
+       display: flex;
+       flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+        
+    }
+.Senha{
+     display: flex;
+       flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+}
+#senha{
+     width: 450px;
+        height: 25px;
+        display: block;
+         margin-left: auto;
+        margin-right: auto;
+}
+.botao{
+       display: block;
+         margin-left: auto;
+        margin-right: auto;
+        font-size: 25px;
+}
+</Style>
+<body>
+    <div class="container">
+    <div class="box">
+       <label for="Login" class="Login">Login</label>
+        <input type="text" id="login" name="login" required><br><br> 
+    <label for="senha" class="Senha">senha</label>
+            <input type="password" id="senha" name="senha" required><br><br>
+          <input type="submit" value="Login" class="botao"> 
+    </div>
+    </div>
+    
+</body>
+</html>
