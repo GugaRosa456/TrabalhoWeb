@@ -8,30 +8,31 @@
 </head>
 <body>
 
-    <form action="lista-usuarios.php" method="POST" class="box">
+    <form action="autenticacao.php" method="POST" class="box">
 
           <div class="container">
-            <label for="username">Login</label>
+            <label for="username" class="texto">Login</label>
           </div>
           <div class="container">
-            <input type="text" id="username" name="username" required>
+            <input type="text" id="username" name="username"  class="tx" required>
                  <br><br> 
           </div>
       <div class="container">
-         <label for="password">Password</label>
+         <label for="password" class="texto">Password</label>
       </div>
       <div class="container">
-           <input type="password" id="password" name="password" required>
+           <input type="password" id="password" name="password" class="tx" required>
       <br><br>
       </div>
 <div class="container">
-        <input type="submit" value="Login">
+        <input type="submit" value="Login" class="botao1">
 </div>
 <br>
-    <form action="cadastro_usuario.php">
-      <div class="container">
-        <input type="submit" value="Cadastro"><br><br>
-      </div>
     </form>
+    <form action="cadastro_usuario.php" class="box">
+      <div class="container">
+        <input type="submit" value="Cadastro" class="botao2"><br><br>
+      </div>
+</form>
 </body>
 </html>

@@ -30,14 +30,22 @@ header{
     height: 20vh;
 }
 .box{
-  background: rgb(163, 163, 163);
-  width: 400px;
-  height: 275px;
+  background: rgb(214, 214, 214);
+  width: 350px;
 }
 .botao1{
-  
+ width: 100px;
 }
 .botao2{
-  
+  width: 100px;
+}
+.tx{
+  width:300px;
+}
+.texto{
+font-size: 20px;
+}
+.botao3{
+  gap: 10px;
 }
 
