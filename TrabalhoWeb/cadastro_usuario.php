@@ -11,7 +11,7 @@
     <h1>Cadastro de Usuário</h1>
 </header>
 <div class="container">
-    <form action="login.php" method="POST">
+    <form action="processa_cadastro.php" method="POST">
         <div class="container">
         <label for="nome">Nome:</label>
         </div>
