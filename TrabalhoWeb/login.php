@@ -14,14 +14,14 @@
             <label for="username" class="texto">Login</label>
           </div>
           <div class="container">
-            <input type="text" id="username" name="username"  class="tx" required>
+            <input type="text" id="username" name="login"  class="tx" required>
                  <br><br> 
           </div>
       <div class="container">
          <label for="password" class="texto">Password</label>
       </div>
       <div class="container">
-           <input type="password" id="password" name="password" class="tx" required>
+           <input type="password" id="password" name="senha" class="tx" required>
       <br><br>
       </div>
 <div class="container">

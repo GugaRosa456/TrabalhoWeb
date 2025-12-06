@@ -1,6 +1,6 @@
 <?php 
 function connecta_bd(){
-    $servername = "localhost:3307";
+    $servername = "localhost:3306";
     $username = "root";
     $password = "";
     $dbname = "bd";
@@ -37,10 +37,10 @@ function update_usuario ($id, $nome, $login, $senha){
     return $stmt->execute();
 }
 
-function get_usuario($id){
+function get_usuario($login){
     $con= connecta_bd();
-    $stmt=$con->prepare("SELECT * FROM usuarios WHERE id = :id");
-    $stmt->bindparam(':id', $id);
+    $stmt=$con->prepare("SELECT * FROM usuarios WHERE login = :login");
+    $stmt->bindparam(':login', $login);
    $stmt->execute();
         return $stmt->fetch(PDO::FETCH_ASSOC);
 }

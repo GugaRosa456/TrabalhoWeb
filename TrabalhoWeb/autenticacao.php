@@ -1,16 +1,17 @@
 <?php
+require_once 'conexao.php';
 session_start();
-if(!isset($_POST['username']) || !isset($_POST['password'])){
+if(!isset($_POST['login']) || !isset($_POST['senha'])){
     header("Location: login.php?error=faltando_dados");
     exit();
 }
-$username = $_POST['username'];
-$password = $_POST['password'];
-if ($username === "admin" && $password === "senha123"){
-    echo "<h1> Login bem-sucedido!</h1>";
-    echo "<p> Bem-Vindo, $username!</p>";
-    
-    $_SESSION["usr"]="admin";
+$username = $_POST['login'];
+$password = $_POST['senha'];
+
+$user = get_usuario($username);
+
+if ($user && $user['login'] === $username && $user['senha'] === $password) {
+    header("Location: lista-usuarios.php");
 }
 else{
     header("Location: login.php?error=credenciais_invalidas");
