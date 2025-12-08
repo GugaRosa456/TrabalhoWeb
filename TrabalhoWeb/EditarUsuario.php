@@ -46,8 +46,11 @@ $usuario = get_usuario($id);
       </div>
 <br>
       <div class="container">
+        <form action="excluirUsuario.php">
+             <input type="hidden" name="id" value="<?=$id?>">
         <input type="submit" value="Deletar" class="botao1"><br><br>
       </div>
+      </form>
       <form action="lista-usuarios.php" method="POST">
       <div class="container">
         <input type="submit" value="voltar" class="botao1"><br><br>
