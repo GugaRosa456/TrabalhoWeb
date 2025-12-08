@@ -1,9 +1,5 @@
 <?php session_start();
-    if (!isset($_SESSION["usr"])){
-        echo var_dump($_SESSION["usr"]);
-        header("Location: login.php?error=deslogado");
-        exit();
-    }
+   
 ?>
 <!DOCTYPE html>
 <html lang="en">

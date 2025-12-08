@@ -1,8 +1,8 @@
 
 <?php
 require_once "conexao.php";
-$login = $_GET['login'] ?? null;
-$usuario = get_usuario($login);
+$id = $_GET['id'];
+$usuario = get_usuario($id);
 ?>
 <!DOCTYPE html>
 <html lang="en">

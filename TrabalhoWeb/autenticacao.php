@@ -8,7 +8,7 @@ if(!isset($_POST['login']) || !isset($_POST['senha'])){
 $username = $_POST['login'];
 $password = $_POST['senha'];
 
-$user = get_usuario($username);
+$user = get_usuarioLogin($username,$password);
 
 if ($user && $user['login'] === $username && $user['senha'] === $password) {
     header("Location: lista-usuarios.php");
