@@ -41,12 +41,13 @@ $usuario = get_usuario($id);
         <input type="password" id="senha" name="senha" required  value="<?php echo htmlspecialchars($usuario['senha']); ?>">
         </div>
          <br>
+      </form>
     <div class="container">
         <input type="submit" value="Editar" class="botao1"><br><br>
       </div>
 <br>
       <div class="container">
-        <form action="excluirUsuario.php">
+        <form action="excluirUsuario.php" method="POST">
              <input type="hidden" name="id" value="<?=$id?>">
         <input type="submit" value="Deletar" class="botao1"><br><br>
       </div>
