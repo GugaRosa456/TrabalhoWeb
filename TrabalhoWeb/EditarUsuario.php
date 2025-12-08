@@ -1,3 +1,9 @@
+
+<?php
+require_once "conexao.php";
+$login = $_GET['login'] ?? null;
+$usuario = get_usuario($login);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,48 +11,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="stylesheet" href="style_Login.css">
     <title>Editar Usuario</title>
-        <?php
-require_once "conexao.php";
-echo $id;  
-$usuarios = get_usuario($id);
-
-//echo var_dump ($usuarios);
-?>
 <div class="container">
 <h1>Edição Usuario</h1>
 <br>
-<table border="1">
-   <tr>
-    <th>ID</th>
-    <th>Nome</th>
-    <th>Login</th>
-    <th>Senha</th>
-   </tr> 
-   <?php foreach($usuarios as $usuario): ?>
-    <tr>
-        <td><?php echo htmlspecialchars($usuario['id']);?></td>
-        <td><?php echo htmlspecialchars($usuario['nome']);?></td>
-        <td><?php echo htmlspecialchars($usuario['login']);?></td>
-        <td><?php echo htmlspecialchars($usuario['senha']);?></td>
-         </tr>
-<?php endforeach; ?>
-</table>
 </div>
 </head>
-
 <body>
-    <br>
+     <form action="editar-usuario.php" method="POST" class="container">
+      <div class="container">
+        <label for="nome" class="texto">Nome:</label>
+        </div>
+        <div class="container">
+        <input type="text" id="nome" name="nome" required value="<?php echo htmlspecialchars($usuario['nome']); ?>">
+          </div>
+          <br>
+           <div class="container">
+        <label for="login" class="texto">Login:</label>
+           </div>
+        <br>
+            <div class="container">
+        <input type="text" id="login" name="login" required value="<?php echo htmlspecialchars($usuario['login']); ?>" >
+        </div>
+        <br>
+          <div class="container">
+        <label for="senha" class="texto">senha:</label>
+         </div>
+         <br>
+          <div class="container">
+        <input type="password" id="senha" name="senha" required  value="<?php echo htmlspecialchars($usuario['senha']); ?>">
+        </div>
+         <br>
     <div class="container">
-        <input type="submit" value="Editar"><br><br>
+        <input type="submit" value="Editar" class="botao1"><br><br>
       </div>
 <br>
       <div class="container">
-        <input type="submit" value="Deletar"><br><br>
+        <input type="submit" value="Deletar" class="botao1"><br><br>
       </div>
       <form action="lista-usuarios.php" method="POST">
       <div class="container">
-        <input type="submit" value="voltar"><br><br>
+        <input type="submit" value="voltar" class="botao1"><br><br>
+        </div>
         </form>
-      </div>
+</form>
+     
+
 </body>
 </html>

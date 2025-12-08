@@ -18,10 +18,11 @@ $usuarios = get_usuarios();
 
 //echo var_dump ($usuarios);
 ?>
-<div class="container">
+<div class="container" >
 <h1>Lista de Usuários</h1>
 <br>
-<table border="1">
+<table border="2
+" class="tabela">
    <tr>
     <th>ID</th>
     <th>Nome</th>
@@ -40,9 +41,10 @@ $usuarios = get_usuarios();
 </div>
 </head>
 <body>
-<form action="login.php" method="POST">
+    <br>
+<form action="login.php" method="POST" class>
       <div class="container">
-        <input type="submit" value="voltar"><br><br>
+        <input type="submit" value="voltar" class="botao1"><br><br>
         </form>
       </div>
 </body>
