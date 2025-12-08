@@ -1,6 +1,6 @@
 <?php 
 function connecta_bd(){
-    $servername = "localhost:3307";
+    $servername = "localhost:3306";
     $username = "root";
     $password = "";
     $dbname = "bd";

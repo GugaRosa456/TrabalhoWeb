@@ -13,6 +13,7 @@ $usuario = get_usuario($id);
     <title>Editar Usuario</title>
   </head>
 <body>
+  <div class="box">
 <div class="container">
 <h1>Edição Usuario</h1>
 <br>
@@ -47,7 +48,6 @@ $usuario = get_usuario($id);
       <input type="submit" value="Editar" class="botao1"><br><br>
     </div>
     </form>
-<br>
       <div class="container">
         <form action="excluirUsuario.php" method="POST">
              <input type="hidden" name="id" value="<?=$id?>">
@@ -60,5 +60,6 @@ $usuario = get_usuario($id);
         <input type="submit" value="voltar" class="botao1"><br><br>
         </div>
         </form>
+        </div>
 </body>
 </html>

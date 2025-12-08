@@ -14,6 +14,7 @@ $usuarios = get_usuarios();
 
 //echo var_dump ($usuarios);
 ?>
+<div class="box">
 <div class="container" >
 <h1>Lista de Usuários</h1>
 <br>
@@ -42,6 +43,7 @@ $usuarios = get_usuarios();
       <div class="container">
         <input type="submit" value="voltar" class="botao1"><br><br>
         </form>
+      </div>
       </div>
 </body>
 </html>
